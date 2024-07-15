@@ -1,145 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexboxes</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://kit.fontawesome.com/a9d4170c86.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <style>
-        @media screen and (max-width: 450px) {
-            .main{
-            border:1px solid;
-            height:1600px;
-            width:400px;
-            background-image: radial-gradient(lightpink,lightyellow);
-            display:flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap:1px;
+      @media screen and (max-width: 450px) {
+        .main {
+          border: 2px solid;
+          background-image: radial-gradient(lightyellow,lightpink);
+          height: 1400px;
+          width: 400px;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          
+        }
+        .item {
+          border: 2px solid;
+          width: 300px;
+          height: 170px;
+          align-content: center;
+        }
+        .para {
+          display: inline;
+        }
+      }
 
+      @media screen and (min-width: 451px) {
+        .main {
+          background-image: radial-gradient(lightyellow,lightpink);
+          height:550px;
+          width: 900px;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          justify-content: space-evenly;
+          border: 2px solid;
         }
-        
+        .item {
+          border: 2px solid;
+          width: 250px;
+          height: 150px;
+          align-items: center;
+          align-content: center;
+          padding:7px;
+          .para {
+            display: inline;
+          }
+        }
+      }
 
-        }
-
-        @media screen and (min-width: 451px) {
-            .main{
-           
-            height:800px;
-            width:1200px;
-            background-image: radial-gradient(lightpink,lightyellow);
-            display:flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap:20px;
-            justify-content: space-evenly;
-           
-            }
-
-        }
-        
-            
-       
-         img{
-           height:30%;
-           width:18%;
-           position:relative;
-           padding:10px;
-        }
-        .item{
-            border: 1px solid;
-            height:250px;
-            width:350px;
-            align-content: center;
-        }
-        .para{
-            margin-left:80px;
-            margin-top: -70px;
-        }
-        .para1{
-            margin-left:80px;
-            margin-top: -10px;
-        }
-        .fa-star{
-            color: green;
-            
-        }
-        
-        
-        </style>
-</head>
-<body>
+      img {
+        position: relative;
+        height: 30%;
+        width: 15%;
+        padding: 2px;
+      }
+      
+    </style>
+  </head>
+  <body>
     <div class="main">
-        <div class="item">
-            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRTJXVsv7-8sokPpx3flgN8M8ktqxy1GVxghuKZO9M5KgcGxTaN">
-            <p class="para">Stripe</p>
-            <p class="para1">Payment Services <br><i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i></p>
-           
-            <p>Get more context on your users with stripe data inside your platform.</p>
-        </div>
-        <div class="item">
-            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTHBhhGudEoRBWWxgnMh2640fEglabtOaH4PsC-X7CcJ-a8AG6I">
-            <p class="para">Shopify</p>
-            <p class="para1">Ecommerce <br> <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-            </p>
-            
-            <p>Sell you items with ease with having any website with our free platform.</p>
-        </div>
-        <div class="item">
-            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTrw2JQIi_6v_jycamsqgm0-ycffMBxLt_G4K8Sc0732m5gw2tK">
-            <p class="para">Mailchimp</p>
-            <p class="para1">Project Management <br> <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i></p>
-            
-            <p>Capture and sync subscribers from your mailchimp platform to ours with ease.</p>
-        </div>
-        <div class="item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdBEL9v2uMTNVh7aHhdW3tJV13DZqcFdW6BsZFBjUCi5XUZC6u">
-            <p class="para">Atlassian</p>
-            <p class="para1">Project Management <br><i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i></p>
-            
-            <p>Developing products for developers,project managers and architects.</p>
-        </div>
-        <div class="item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCK5xZj60gl_6l9Mz_1hgou9r-jpKG-FvNS395UrEFf9L45APc">
-            <p class="para">Dropbox</p>
-            <p class="para1">File Management <br>  <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i></p>
-           
-            <p>Use dropbox to sync your photos to our platform and share it with others.</p>
-            
-        </div>
-        <div class="item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ZuxCvKpFKGqwPG4pAihySW1i0lyiMPHdbXU7ziZ7wM5wv0jM">
-            <p class="para">Salesforce</p>
-            <p class="para1">Project Management <br>  <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i></p>
-           
-            <p>Developing products for developers,project managers and architects.</p>
-        </div>
-    </div> 
-
-    
-    
-</body>
+      <div class="item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT9WFxEusXVVxEdcTckloSUjedPH43hlLT4UDBjXnLv6GwdXzyjZPIOXldSWILHLuKjtk&usqp=CAU">
+        <p class="para"><b>Stripe</b></p>
+        <p>Payment Services</p>
+        <p>
+          Get more context on your users with stripe data inside your platform
+        </p>
+      </div>
+      <div class="item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO9_2bWykGPmcVN2dJld2KmElwoo_P76Yz7g&s">
+        <p class="para"><b>Shopify</b></p>
+        <p>Payment Services</p>
+        <p>
+            Sell you items with ease with having any website with our free platform
+        </p>
+      </div>
+      <div class="item">
+        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTrw2JQIi_6v_jycamsqgm0-ycffMBxLt_G4K8Sc0732m5gw2tK" />
+        <p class="para"><b>Mailchimp</b></p>
+        <p>Payment Services</p>
+        <p>
+            Capture and sync subscribers from your mailchimp platform to ours with ease.
+        </p>
+      </div>
+      <div class="item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSUK24crSR_C7Ekj48khDjIE6sBeNWwG6kcw&s" />
+        <p class="para"><b>Atlassian</b></p>
+        <p>Payment Services</p>
+        <p>
+         Developing products for developers,project managers and architects.
+        </p>
+      </div>
+      <div class="item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCK5xZj60gl_6l9Mz_1hgou9r-jpKG-FvNS395UrEFf9L45APc" />
+        <p class="para"><b>Dropbox</b></p>
+        <p>Payment Services</p>
+        <p>
+            Use dropbox to sync your photos to our platform and share it with others.
+        </p>
+      </div>
+      <div class="item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzGJsnP0yYB5tpBpdwcjcH5n2BDDwbwT2qnw&s" />
+        <p class="para"><b>Salesforce</b></p>
+        <p>Payment Services</p>
+        <p>
+            Developing products for developers, project managers and architects.
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
